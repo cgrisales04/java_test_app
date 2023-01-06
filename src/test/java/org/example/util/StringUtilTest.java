@@ -19,4 +19,23 @@ public class StringUtilTest {
     public void testRepeatStringNegativeTimes() {
         StringUtil.repeat("Hola", -2);
     }
+    @Test
+    public void testStringIsNotEmpty() {
+        Assert.assertFalse(StringUtil.isEmpty("Not a empty"));
+    }
+
+    @Test
+    public void testStringIsEmpty() {
+        Assert.assertTrue(StringUtil.isEmpty(""));
+    }
+
+    @Test
+    public void testStringIsNull() {
+        Assert.assertTrue(StringUtil.isEmpty(null));
+    }
+
+    @Test
+    public void testStringHaveSpace() {
+        Assert.assertTrue(StringUtil.isEmpty(" "));
+    }
 }
